@@ -1,0 +1,147 @@
+.about {
+    width: 40%;
+    .manager {
+        background: #fff;
+        text-align: center;
+        margin-left: 290px;
+        .manager-picture {
+            margin-inline: auto;
+            width: 90px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-image: url(../../Assets/Profile/manager.png);
+            background-position: center;
+            background-size: cover;
+        }
+        a {
+            color: #461AC5;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-top: .8em;
+            margin-bottom: 1.3em;
+        }
+        .manager-job {
+            font-weight: 500;
+            margin-block: .7em;
+        }
+    }
+
+    .activities {
+        margin-top: 185px;
+        width: 400px;
+        // margin-bottom: 20px;
+        .activity {
+            margin-bottom: 45px;
+            width: 300px;
+            margin-left: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .left {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                .activity-img {
+                    img {
+                        height: 50px;
+                        animation: scale 1s infinite alternate;
+                    }
+
+                    @keyframes scale {
+                        to {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                .activity-description {
+                    font-weight: 600;
+                    span {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                align-items: center;
+                // width: 200px;
+                .activity-profil {
+                    position: absolute;
+                    // right: 200px;
+                    div {
+                        height: 42px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        border: 2px solid #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        display: inline-block;
+                        position: absolute;
+                        &:nth-of-type(1) {
+                            right: -20px;
+                        }
+                        &:nth-of-type(2) {
+                            right: calc(-20px * 2);
+                        }
+                        &:nth-of-type(3) {
+                            right: calc(-20px * 3);
+                        }
+                        &:nth-of-type(4) {
+                            right: calc(-20px * 4);
+                        }
+                        img {
+                            height: 40px;
+                          }
+                    }
+                }
+                .option {
+                    width: 10px;
+                    height: 40px;
+                    margin-left: 70px;
+                } 
+            }
+        }
+    }
+}
+
+
+footer {
+    display: flex;
+    gap: 18em;
+    padding: 0 16px 10px;
+    .social {
+        img {
+            height: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .about {
+        width: 85%;
+        margin-top: 10em;
+        // background: red;
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        .manager {
+            margin-left: 0;
+            width: 190px;
+            text-align: center;
+            
+        }
+        .activities {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: 665px) {
+    .about {
+        flex-direction: column;
+        gap: 5em;
+        align-items: center;
+    }
+}

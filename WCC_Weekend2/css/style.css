@@ -1,0 +1,385 @@
+/*import font*/
+@font-face {
+  font-family: "roboto-regular";
+  src: url(../font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(../font/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: url(../font/Roboto-Medium.ttf);
+}
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto-regular";
+}
+
+/* general styles */
+body {
+  padding: 3.5% 4%;
+  position: relative;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "roboto-bold";
+  font-weight: bold;
+}
+
+h2 {
+  font-style: 30px;
+}
+
+.more {
+  color: #F9B21E;
+  font-weight: 500;
+}
+
+/*loader*/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.loader-container.fade-out {
+  transform-origin: center;
+  transform: scale(0);
+  opacity: 0;
+}
+
+body {
+  background-image: url(../../Assets/desk.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+body main {
+  width: 60%;
+}
+body main .categories {
+  margin-top: 2.5rem;
+}
+body main .categories ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+body main .categories ul a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  padding: 0.6em 0.8em;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+body main .categories ul li {
+  position: relative;
+}
+body main .categories ul li:not(li.active)::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #F9B21E;
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  transition: all 0.3s ease-in-out;
+}
+body main .categories ul li:not(li.active):hover::after {
+  width: 100%;
+}
+body main .categories ul li.active a {
+  background: #F9B21E;
+  color: #fff;
+}
+body main .camping {
+  display: flex;
+  gap: 2em;
+  margin-top: 2em;
+}
+body main .camping .camping-picture {
+  width: 400px;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-image: url(../../Assets/wwc.png);
+  background-position: center;
+  background-size: cover;
+}
+body main .camping .camping-description {
+  position: relative;
+}
+body main .camping .camping-description .view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body main .camping .camping-description .view div {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 10px;
+  background: rgba(59, 59, 210, 0.4);
+}
+body main .camping .camping-description .view div.active {
+  background: rgba(59, 59, 210, 0.8);
+  height: 22px;
+  border-radius: 4px;
+}
+body main .camping-cards {
+  margin-top: 3em;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .camping-cards .card {
+  background: #fff;
+  height: 250px;
+  min-width: 190px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+body main .camping-cards .card .card-img {
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: url(../../Assets/bousole.png);
+  background-position: center;
+  background-size: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: 25px;
+  transition: transform 2s;
+}
+body main .camping-cards .card .card-img.destination {
+  background-image: url(../../Assets/destination.png);
+}
+body main .camping-cards .card:hover {
+  box-shadow: 1px 1px 5px rgb(30, 107, 230);
+}
+body main .camping-cards .card:hover .card-img {
+  transform: rotate(90deg);
+}
+body main .camping-cards .card .card-title {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+/*responsive*/
+@media (max-width: 1100px) {
+  body {
+    background: #fff;
+    background-size: cover;
+    background-position: 0 20px;
+    flex-direction: column;
+  }
+  body main {
+    width: 100%;
+  }
+  body main .camping {
+    flex-direction: column;
+  }
+  body main .camping .camping-picture {
+    width: 100%;
+    height: 400px;
+  }
+  body main .camping .camping-description {
+    margin: auto;
+  }
+  body main .camping .camping-description .camping-description-content {
+    text-align: center;
+  }
+  body main .camping .camping-description .camping-description-content h2 {
+    font-size: 30px;
+  }
+  body main .camping .camping-description .view {
+    display: none;
+  }
+  body main .camping-cards {
+    margin-inline: auto;
+    min-width: 600px;
+    justify-content: flex-start;
+    gap: 8em;
+  }
+}
+@media (max-width: 800px) {
+  .camping-picture {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+@media (max-width: 626px) {
+  .camping-cards .camping-description .camping-description-content {
+    width: 140px;
+    margin-left: 260px;
+  }
+  .camping-cards .camping-description .view {
+    top: -40px;
+    margin-left: 200px;
+  }
+  .camping-cards .camping-description .view div {
+    display: inline-block;
+  }
+}
+.about {
+  width: 40%;
+}
+.about .manager {
+  background: #fff;
+  text-align: center;
+  margin-left: 290px;
+}
+.about .manager .manager-picture {
+  margin-inline: auto;
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: url(../../Assets/Profile/manager.png);
+  background-position: center;
+  background-size: cover;
+}
+.about .manager a {
+  color: #461AC5;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 1.3em;
+}
+.about .manager .manager-job {
+  font-weight: 500;
+  margin-block: 0.7em;
+}
+.about .activities {
+  margin-top: 185px;
+  width: 400px;
+}
+.about .activities .activity {
+  margin-bottom: 45px;
+  width: 300px;
+  margin-left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.about .activities .activity .left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.about .activities .activity .left .activity-img img {
+  height: 50px;
+  animation: scale 1s infinite alternate;
+}
+@keyframes scale {
+  to {
+    transform: scale(1.2);
+  }
+}
+.about .activities .activity .left .activity-description {
+  font-weight: 600;
+}
+.about .activities .activity .left .activity-description span {
+  font-size: 25px;
+}
+.about .activities .activity .right {
+  display: flex;
+  align-items: center;
+}
+.about .activities .activity .right .activity-profil {
+  position: absolute;
+}
+.about .activities .activity .right .activity-profil div {
+  height: 42px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+}
+.about .activities .activity .right .activity-profil div:nth-of-type(1) {
+  right: -20px;
+}
+.about .activities .activity .right .activity-profil div:nth-of-type(2) {
+  right: -40px;
+}
+.about .activities .activity .right .activity-profil div:nth-of-type(3) {
+  right: -60px;
+}
+.about .activities .activity .right .activity-profil div:nth-of-type(4) {
+  right: -80px;
+}
+.about .activities .activity .right .activity-profil div img {
+  height: 40px;
+}
+.about .activities .activity .right .option {
+  width: 10px;
+  height: 40px;
+  margin-left: 70px;
+}
+
+footer {
+  display: flex;
+  gap: 18em;
+  padding: 0 16px 10px;
+}
+footer .social img {
+  height: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 1100px) {
+  .about {
+    width: 85%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about .manager {
+    margin-left: 0;
+    width: 190px;
+    text-align: center;
+  }
+  .about .activities {
+    margin-top: 0;
+  }
+}
+@media (max-width: 665px) {
+  .about {
+    flex-direction: column;
+    gap: 5em;
+    align-items: center;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

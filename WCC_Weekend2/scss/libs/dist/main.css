@@ -1,0 +1,58 @@
+body {
+  display: flex;
+}
+
+body main {
+  width: 60%;
+}
+
+body main .categories {
+  margin-top: 2.5rem;
+}
+
+body main .categories ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+body main .categories ul a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+
+body main .categories ul li:nth-child(2) a {
+  background: #ffc800;
+  color: #fff;
+  padding: .6em .8em;
+  border-radius: 12px;
+}
+
+body main .camping {
+  display: flex;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+body main .camping .camping-picture {
+  width: 400px;
+  height: 280px;
+  background-image: url(../../Assets/EO.png);
+  border-radius: 18px;
+}
+
+body main .camping .camping-description .view div {
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: #3b3bd2;
+}
+
+body .about {
+  width: 40%;
+}
+
+/*# sourceMappingURL=main.css.map */

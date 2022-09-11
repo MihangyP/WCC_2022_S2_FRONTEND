@@ -1,0 +1,83 @@
+@import "./libs/variables.scss";
+
+/*import font*/
+@font-face {
+    font-family: "roboto-regular";
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url(../font/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "roboto-medium";
+    src: url(../font/Roboto-Medium.ttf);
+}
+
+
+
+/* reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"roboto-regular";
+}
+
+/* general styles */
+body {
+    padding: 3.5% 4%;
+    position: relative;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: "roboto-bold";
+    font-weight:bold;
+}
+
+h2 {
+    font-style: 30px;
+}
+
+.more {
+    color: #F9B21E;
+    font-weight: 500;
+}
+
+
+/*loader*/
+.loader-container {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition:transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.loader-container.fade-out {
+    transform-origin: center;
+    transform: scale(0);
+    opacity: 0;
+}
+
+@import './libs/main.scss';
+@import './libs/about.scss';
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

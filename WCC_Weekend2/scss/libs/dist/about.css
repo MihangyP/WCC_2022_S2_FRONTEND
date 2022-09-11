@@ -1,0 +1,157 @@
+.about {
+  width: 40%;
+}
+
+.about .manager {
+  background: #fff;
+  text-align: center;
+  margin-left: 290px;
+}
+
+.about .manager .manager-picture {
+  margin-inline: auto;
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: url(../../Assets/Profile/manager.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.about .manager a {
+  color: #461AC5;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-top: .8em;
+  margin-bottom: 1.3em;
+}
+
+.about .manager .manager-job {
+  font-weight: 500;
+  margin-block: .7em;
+}
+
+.about .activities {
+  margin-top: 185px;
+  width: 400px;
+}
+
+.about .activities .activity {
+  margin-bottom: 45px;
+  width: 300px;
+  margin-left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.about .activities .activity .left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.about .activities .activity .left .activity-img img {
+  height: 50px;
+  animation: scale 1s infinite alternate;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.about .activities .activity .left .activity-description {
+  font-weight: 600;
+}
+
+.about .activities .activity .left .activity-description span {
+  font-size: 25px;
+}
+
+.about .activities .activity .right {
+  display: flex;
+  align-items: center;
+}
+
+.about .activities .activity .right .activity-profil {
+  position: absolute;
+}
+
+.about .activities .activity .right .activity-profil div {
+  height: 42px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+}
+
+.about .activities .activity .right .activity-profil div:nth-of-type(1) {
+  right: -20px;
+}
+
+.about .activities .activity .right .activity-profil div:nth-of-type(2) {
+  right: calc(-20px * 2);
+}
+
+.about .activities .activity .right .activity-profil div:nth-of-type(3) {
+  right: calc(-20px * 3);
+}
+
+.about .activities .activity .right .activity-profil div:nth-of-type(4) {
+  right: calc(-20px * 4);
+}
+
+.about .activities .activity .right .activity-profil div img {
+  height: 40px;
+}
+
+.about .activities .activity .right .option {
+  width: 10px;
+  height: 40px;
+  margin-left: 70px;
+}
+
+footer {
+  display: flex;
+  gap: 18em;
+  padding: 0 16px 10px;
+}
+
+footer .social img {
+  height: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 1100px) {
+  .about {
+    width: 85%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about .manager {
+    margin-left: 0;
+    width: 190px;
+    text-align: center;
+  }
+  .about .activities {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 665px) {
+  .about {
+    flex-direction: column;
+    gap: 5em;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */
