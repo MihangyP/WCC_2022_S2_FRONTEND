@@ -10,4 +10,4 @@ techzara_wcc2
 - Figma and Adobe Illustrator for designing the page
 ## team members
  - [MIHANGY Pierrot](https://github.com/MihangyP)
- - [RAHARIMANANA Brayann J.D](https://github.com/Technnonking)
+ - [RAHARIMANANA Brayann J.D](https://github.com/Technnoking)
